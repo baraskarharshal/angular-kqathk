@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AppRoutingModule } from './app.routing.module';
+import { SimpleFileUploadComponent } from './simple-file-upload/simple-file-upload.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, SidebarComponent ],
+  declarations: [ AppComponent, HelloComponent, SidebarComponent, SimpleFileUploadComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
