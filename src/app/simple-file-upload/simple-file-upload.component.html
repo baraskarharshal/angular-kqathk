@@ -9,11 +9,10 @@
     
     <div class="preview d-flex">
       <div>
-        <img [ngClass]="{'hide-preview': !file, 'show-preview': file}" 
+        <div *ngIf="isLoading" class="image-spinner" style="width:200px; height:200px;"></div>
+        <img [ngClass]="{'hide-preview': !imageUrl, 'show-preview': imageUrl}" 
               class="d-flex flex-column"
-              src={{imageUrl}}
-              width="200" 
-              height="200">
+              src={{imageUrl}}>
         <span>{{file? file.name: ''}}</span>
       </div>
       <div>
