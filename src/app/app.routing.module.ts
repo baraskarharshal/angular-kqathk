@@ -6,12 +6,12 @@ import { SimpleFileUploadComponent } from './simple-file-upload/simple-file-uplo
 const routes: Routes = [
 
   {
-    path: 'simple-ng-select',
+    path: 'simple-file-upload',
     component: SimpleFileUploadComponent,
   },
     {
     path: '',
-    redirectTo: 'simple-ng-select',
+    redirectTo: 'simple-file-upload',
     pathMatch: 'full'
   },
 

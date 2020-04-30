@@ -1,0 +1,8 @@
+
+.hide-preview {
+  visibility: hidden;
+}
+
+.show-preview {
+  visibility: visible;
+}

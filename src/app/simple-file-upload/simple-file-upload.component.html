@@ -2,8 +2,24 @@
 <div class="row">
 
   <div class="col-md-8 main-panel">
-
-
+    <div class="form-group">
+      <label>Upload File</label>
+      <input type="file" (change)="onSelect($event)" class="form-control w-75" placeholder="Upload File">
+    </div>
+    
+    <div class="preview d-flex">
+      <div>
+        <img [ngClass]="{'hide-preview': !file, 'show-preview': file}" 
+              class="d-flex flex-column"
+              src={{imageUrl}}
+              width="200" 
+              height="200">
+        <span>{{file? file.name: ''}}</span>
+      </div>
+      <div>
+        <button *ngIf="file" (click)="remove()" class="btn btn-primary">Remove</button>
+      </div>
+    </div>
   </div>
 
   <div class="col-md-4 info-panel bg-light p-0">
