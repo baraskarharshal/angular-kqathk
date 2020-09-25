@@ -4,7 +4,7 @@
   <div class="col-md-8 main-panel">
     <div class="form-group">
       <label>Upload File</label>
-      <input type="file" (change)="onSelect($event)" class="form-control w-75" placeholder="Upload File">
+      <input #file type="file" (change)="onSelect($event)" class="form-control w-75" placeholder="Upload File">
     </div>
     
     <div class="preview d-flex">

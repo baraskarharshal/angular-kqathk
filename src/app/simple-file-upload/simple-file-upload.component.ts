@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef,  OnInit, ViewChild } from '@angular/core';
 import {ImageTypes} from '../file-types.config';
 
 @Component({
@@ -7,6 +7,8 @@ import {ImageTypes} from '../file-types.config';
   styleUrls: ['./simple-file-upload.component.scss']
 })
 export class SimpleFileUploadComponent implements OnInit {
+
+  @ViewChild('file', {static: false}) fileEl: ElementRef;
 
   imageUrl: string | ArrayBuffer;
   file: File;
@@ -47,6 +49,7 @@ export class SimpleFileUploadComponent implements OnInit {
   remove() {
     this.file = null;
     this.imageUrl = '';
+    this.fileEl.nativeElement.value = null;
   }
 
 }
